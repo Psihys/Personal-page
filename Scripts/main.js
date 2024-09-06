@@ -1,16 +1,36 @@
 document.addEventListener('DOMContentLoaded', function () {
 const darkButton = document.getElementById("dark-bright-mode-button")
 const body = document.querySelector('body')
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const currentTheme = localStorage.getItem("theme")
 
-if(prefersDarkScheme === 'dark'){
-    body.classList.add('dark')
-    if (darkButton) {
-        darkButton.classList.add("dark-mode-button--active"); 
+
+
+
+const applyTheme = (theme) =>{
+    if(theme === 'dark'){
+        body.classList.add('dark')
+        if (darkButton) {
+            darkButton.classList.add("dark-mode-button--active"); 
+        }
+    }else {
+        body.classList.remove('dark');
+        if (darkButton) {
+            darkButton.classList.remove("dark-mode-button--active");
+        }
     }
+    localStorage.setItem('theme', theme);
 }
-const removeActiveClass = () =>{
+
+const currentTheme = localStorage.getItem("theme")
+if(currentTheme){
+    applyTheme(currentTheme)
+} else{
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    applyTheme(prefersDarkScheme ? 'dark' : 'light');
+}
+
+
+
+const activeClass = () =>{
     if(!body.classList.contains('dark')){
         darkButton.classList.add("dark-mode-button--active");
         body.classList.add('dark')
@@ -25,5 +45,5 @@ const removeActiveClass = () =>{
 } 
 
 
-darkButton.addEventListener('click', removeActiveClass)
+darkButton.addEventListener('click', activeClass)
 });
