@@ -1,0 +1,61 @@
+@import '../App-reset.css';
+
+.sideMenu{
+    max-width: 20%;
+    height: 100%;
+    padding: 30px;
+    border: 1px solid var(--primary-description);
+    border-radius: 5%;
+    background-color: var(--background-color);
+    box-shadow: 
+    -5px -5px 10px var(--primary-description),  
+    5px 5px 10px var(--primary-description);
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+}
+
+ .logo{
+    font-family: 'Protest Guerrilla',sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    position: relative;
+   
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    color: var(--primary-text);
+}
+
+.navigation{
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.navigation-text,.navigation-link{
+    font-size: 20px;
+    color: var(--primary-text);
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--background-color);
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+
+.navigation-text,.navigation-link:hover,.navigation-link.active{
+    box-shadow: 
+    -5px -5px 10px var(--primary-description),  
+    5px 5px 10px var(--primary-description);
+}
+
