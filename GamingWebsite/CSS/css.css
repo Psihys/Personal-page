@@ -23,9 +23,9 @@ body{
 /* Header  */
 .header{
     margin: auto;
-    max-width: 90%;
+    max-width: 1440px;
     display: block;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 .header-navigation{
@@ -55,6 +55,7 @@ body{
 /* main first section */
 .main{
     margin: auto;
+    padding: 20px;
     max-width: 1080px;
     height: auto;
 }
@@ -129,7 +130,7 @@ body{
 
 .main-second-section{
     margin-top: 100px;
-    width: 1150px;
+    max-width: 1150px;
     height: 400px;
     display: flex;
     flex-direction: column;
