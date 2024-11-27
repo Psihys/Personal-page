@@ -178,3 +178,45 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
+/*Footer*/
+
+.footer{
+    margin: auto;
+    max-width: 1440px;
+    display: block;
+    padding: 20px;
+    background-color: black;
+    color: var(--default-text-color);
+    position: relative;
+    bottom: 0;
+}
+
+.footer-navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo{
+    font-family: Poppins, sans-serif;
+}
+
+.footer-social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+.social-media-icon{
+    font-size: 30px;
+    color: var(--default-text-color);
+}
+
+.social-media-icon:hover{
+    color: var(--accent);
+}
+
