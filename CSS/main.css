@@ -276,7 +276,8 @@ html,body{
 
 .image{
     border-radius: 10px;
-
+    max-height: 250px;
+    min-width: 330px;
 }
 
 .image-title{
@@ -321,11 +322,17 @@ html,body{
     margin: auto;
     max-width: 865px;
     height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-image{
     border-radius: 10px;
     box-shadow: 0px 5px 35px 0px #00000040;
+    max-width: 900px;
+    max-height: 650px;
 }
 
 .project-text{
@@ -338,7 +345,7 @@ html,body{
     text-align: center;
 }
 
-.button{
+.link{
     padding: 0 20px;
     margin: auto;
     display: flex;
@@ -348,16 +355,18 @@ html,body{
     height: 50px;
     border-radius: 5px;
     border: 1px solid var(--text-color);
+
+    color: var(--white);
 }
 
-.button-image{
+.link-image{
     width: 24px;
     height: 24px;
     color: var(--text-color);
     margin-right: 5px;
 }
 
-.button-text{
+.link-text{
     font-family: "DM Sans,sans-serif";
     font-size: 16px;
     font-weight: 500;
